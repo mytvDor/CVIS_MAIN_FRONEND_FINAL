@@ -35,7 +35,7 @@
 }
 
 .single-line-input input:focus {
-  border-bottom-color: #007bff;
+  border-bottom-color: #0075aa;
   outline: none;
 }
 
@@ -60,7 +60,7 @@ input {
 
 .form-group input:focus,
 .form-group textarea:focus {
-  border-bottom-color: #007bff;
+  border-bottom-color: #0075aa;
   outline: none;
 }
 
@@ -116,7 +116,7 @@ input {
 }
 
 button[type="submit"] {
-  background-color: #007bff;
+  background-color: #0075aa;
   color: #fff;
   padding: 10px 20px;
   border: none;

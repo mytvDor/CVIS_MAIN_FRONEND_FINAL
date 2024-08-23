@@ -1,54 +1,94 @@
-import React, { Component } from "react";
+// import React, { Component } from "react";
+// import { Image, Button } from "antd";
+// import "../servicepages/index.css";
+// import Navbar from "../../attributes/Navbar";
+// import { useNavigate } from "react-router-dom";
+// const navigate = useNavigate();
+
+// class androiddevpage extends Component {
+//   render() {
+//     return (
+//       <>
+//         <Navbar></Navbar>
+//         <div className="container">
+//           {/* <div className="image wblock">
+//             <Image src="https://static.wixstatic.com/media/4cdf87_5a89b2293faf4d98bd23a49e9fafebba~mv2.jpg/v1/fill/w_613,h_664,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/4cdf87_5a89b2293faf4d98bd23a49e9fafebba~mv2.jpg" />
+//           </div> */}
+//           <div className="text wblock animate-down">
+//             <h1 className="texth1"> Application Development</h1>
+//             <h3>About</h3>
+
+//             <li>hi</li>
+//             <li>hi</li>
+//             <li>hi</li>
+//             <li>hi</li>
+//             <li>hi</li>
+
+//             <button className="enqbtn" onClick={() => navigate("/contact")}>
+//               Enquiry
+//             </button>
+//             <br />
+//             {/* <Button className="btn1" href="#">
+//               Previous
+//             </Button>
+//             <Button className="btn2" href="#">
+//               Next
+//             </Button> */}
+//           </div>
+//         </div>
+//         <div className="button-container">
+//           {/* <Button className="btn1" href="#">
+//             Previous
+//           </Button>
+//           <Button className="btn2" href="#">
+//             Next
+//           </Button> */}
+//         </div>
+//       </>
+//     );
+//   }
+// }
+
+// export default androiddevpage;
+import React from "react";
 import { Image, Button } from "antd";
 import "../servicepages/index.css";
 import Navbar from "../../attributes/Navbar";
+import { useNavigate } from "react-router-dom";
 
-class androiddevpage extends Component {
-  render() {
-    return (
-      <>
-        <Navbar></Navbar>
-        <div className="container">
-          <div className="image wblock">
-            <Image src="https://static.wixstatic.com/media/4cdf87_5a89b2293faf4d98bd23a49e9fafebba~mv2.jpg/v1/fill/w_613,h_664,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/4cdf87_5a89b2293faf4d98bd23a49e9fafebba~mv2.jpg" />
-          </div>
-          <div className="text wblock">
-            <h1 className="texth1"> Application Development</h1>
-            <h3>About</h3>
-            <p>
-              Do you need a mobile app for your business? We are here to help
-              you out! Irrespective of the size of your project, our senior
-              project managers will work with you to select the best technology
-              platform, define the scope, and build the right app for your
-              business. As a leading mobile app development company in India, we
-              have successfully delivered mobile apps for businesses of various
-              sizes - from start-ups to large enterprises. Driven by the right
-              strategy, creative design, and high-end technology, our native and
-              hybrid app developers deliver products that delight your customers
-              and grow your business. Contact us and explore our state of the
-              art mobile app development services.When building an app, we focus
-              on three basic aspects - the look, the ease of use, and the
-              conversion potential. While the UI/UX attracts the customers in
-              the first place, a robust architecture & top-notch security
-              determine the life of an app in the long run. We believe an app
-              that delivers value to the users will eventually drive conversions
-              for your business. Here is an overview of the holistic approach we
-              adopt while providing mobile app development services.
-            </p>
-            <button className="enqbtn">Enquiry</button>
-          </div>
-        </div>
-        <div className="button-container">
-          <Button className="btn1" href="#">
-            Previous
-          </Button>
-          <Button className="btn2" href="#">
-            Next
-          </Button>
-        </div>
-      </>
-    );
-  }
-}
+const AndroidDevPage = () => {
+  const navigate = useNavigate();
 
-export default androiddevpage;
+  const handleNavigate = () => {
+    navigate("/contact");
+  };
+
+  return (
+    <>
+      <Navbar />
+      <div className="container">
+        <div className="text wblock animate-down">
+          <h1 className="texth1">Application Development</h1>
+          <br></br>
+
+          <h3>About</h3>
+          <br></br>
+          <li>hi</li>
+          <li>hi</li>
+          <li>hi</li>
+          <li>hi</li>
+          <li>hi</li>
+          <br></br>
+
+          <button className="enqbtn" onClick={handleNavigate}>
+            Enquiry
+          </button>
+          <br />
+        </div>
+      </div>
+      <div className="button-container"></div>
+    </>
+  );
+};
+
+export default AndroidDevPage;

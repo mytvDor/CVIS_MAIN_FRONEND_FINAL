@@ -19,7 +19,7 @@ const Footer = () => {
             <button className="enroll-button">Enroll Now</button>
           </div>
         </div> */}
-        <div className="footer-section contact-s">
+        <div className="footer-section contact-s animate-left">
           <h3>Contact Us</h3>
           <div className="contact-info ca-gap">
             <p className="add-cont">
@@ -33,14 +33,11 @@ const Footer = () => {
                 <LocationOnIcon />
               </div>{" "}
               <t />
-              <div className="addr">
-                {" "}
-                Plot No.14, Laxmi Vasahat, Jawahar Nagar, Kolhapur-416012
-              </div>{" "}
+              <div className="addr"> India</div>{" "}
             </p>
           </div>
         </div>
-        <div className="footer-section contact-s social">
+        <div className="footer-section contact-s social animate-right">
           <h3>Follow</h3>
           <div className="socialMedia-icons">
             <a href="https://www.instagram.com/collabvisioninfo/">

@@ -21,6 +21,7 @@ import Cloudcpage from "./components/cservices/servicepages/cloudcpage";
 import Softwaretesting from "./components/cservices/servicepages/swtesting";
 import Digitalbranding from "./components/cservices/servicepages/digitalbranding";
 import Androiddevpage from "./components/cservices/servicepages/androiddevpage";
+import Integration from "./components/cservices/servicepages/Integration";
 import Ccpagecontent from "./components/learning_modules/learning_pages/ccpage";
 import Webdesign from "./components/cservices/servicepages/webdesign";
 import Login from "./components/attributes/login";
@@ -29,6 +30,7 @@ import "./App.css";
 import Cont from "./components/contact_us/Cont";
 import Temp from "./components/home/Temp";
 import Timeline from "./components/home/Motion/Timeline";
+import PricingCards from "./components/home/allCards/PricingCards";
 function App() {
   return (
     <>
@@ -44,6 +46,7 @@ function App() {
           <Route path="/services/graphic" element={<Garphic />} />
           <Route path="/services/seopage" element={<Seopage />} />
           <Route path="/services/cloudpage" element={<Cloudcpage />} />
+          <Route path="/services/Integration" element={<Integration />} />
           <Route path="/services/webdesign" element={<Webdesign />} />
           <Route path="/services/appdev" element={<Androiddevpage />} />
           <Route
@@ -75,6 +78,9 @@ function App() {
             element={<SoftwareTesting />}
           />
           <Route path="/learning/ccmulesoft" element={<Ccmulesoft />} />
+
+          {/* <Route path="/pricing" element={<PricingCards />}></Route> */}
+          <Route path="/pricing/:category" element={<PricingCards />} />
         </Routes>
         <GoToTop />
         <Footer />

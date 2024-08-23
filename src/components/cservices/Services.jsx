@@ -20,7 +20,7 @@ const cardData = [
     href: "/services/webdesign",
     thumbnail:
       "https://static.wixstatic.com/media/4cdf87_da23de8dd2d448e0bb976548bf82ecaf~mv2.jpg/v1/fill/w_558,h_419,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Image-empty-state.jpg",
-    title: "Web Design",
+    title: "Web Development",
   },
   {
     href: "/services/appdev",
@@ -41,10 +41,10 @@ const cardData = [
   //   title: "Software Testing",
   // },
   {
-    href: "/services/cloudpage",
+    href: "/services/Integration",
     thumbnail:
-      "https://static.wixstatic.com/media/4cdf87_30830cc2afe3401499f8eaaa2805ac59~mv2.jpg/v1/fill/w_950,h_664,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/4cdf87_30830cc2afe3401499f8eaaa2805ac59~mv2.jpg",
-    title: "Cloud Services",
+      "https://static.wixstatic.com/media/4cdf87_10efa682cfba485d983f4cb28e0c8ac4~mv2.jpg/v1/fill/w_613,h_664,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/4cdf87_10efa682cfba485d983f4cb28e0c8ac4~mv2.jpg",
+    title: "Integration",
   },
   // {
   //   href: "/services/swdevelopment",
@@ -60,7 +60,7 @@ function Services() {
 
       <div>
         <h1 className="HeaderText Ht">Services</h1>
-        <div className="Headerimage">
+        <div className="Headerimage ">
           <Image
             className="img"
             width={"100%"}
@@ -68,10 +68,10 @@ function Services() {
             src="https://static.wixstatic.com/media/11062b_bd24f5b72b31462882a36f9ce22c7e3a~mv2.jpeg/v1/fill/w_1899,h_239,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/11062b_bd24f5b72b31462882a36f9ce22c7e3a~mv2.jpeg"
           />
         </div>
-        <div>
+        <div className="gapper">
           <div className="cards">
             {cardData.map((card, index) => (
-              <div className="mycard-Learn1 l1">
+              <div className="mycard-Learn1 l1 animate-down">
                 <NewsHeaderCard
                   key={index}
                   className="mainCard"
