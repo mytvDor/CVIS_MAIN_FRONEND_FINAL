@@ -23,7 +23,12 @@ const Footer = () => {
           <h3>Contact Us</h3>
           <div className="contact-info ca-gap">
             <p className="add-cont">
-              <PhoneIcon /> <div className="phone">+ 91 8767421060</div>{" "}
+              <div className="loc">
+                {" "}
+                <LocationOnIcon />
+              </div>{" "}
+              <t />
+              <div className="addr"> India + 91 8767421060</div>{" "}
             </p>
           </div>
           <div className="Address ca-gap">
@@ -33,10 +38,24 @@ const Footer = () => {
                 <LocationOnIcon />
               </div>{" "}
               <t />
-              <div className="addr"> India</div>{" "}
+              <div className="addr"> Singapure + 65 </div>{" "}
             </p>
           </div>
+          <div className="Address ca-gap">
+            <p className="add-cont">
+              <div className="loc">
+                {" "}
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWszgQllCU0cZ4hekKFjalWhBxZXiL9RcJUA&s"
+                  alt="Hero"
+                />
+              </div>{" "}
+              <t />
+              {/* <div className="addr"> ISO CERTIFIED </div>{" "} */}
+            </p>
+          </div>{" "}
         </div>
+
         <div className="footer-section contact-s social animate-right">
           <h3>Follow</h3>
           <div className="socialMedia-icons">

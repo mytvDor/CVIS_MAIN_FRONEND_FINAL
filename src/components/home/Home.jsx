@@ -45,12 +45,27 @@ import Hero from "./Hero.jpg";
 import { useNavigate } from "react-router-dom";
 import Computer from "./Computer";
 import PriceCard from "./allCards/PriceCard";
+import { useEffect } from "react";
 
 function Home() {
   const navigate = useNavigate();
+  useEffect(() => {
+    const styleSheet = document.styleSheets[0];
+    const keyframes = `
+      @keyframes bgAnimation {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 100%; }
+        100% { background-position: 0% 50%; }
+      }`;
+
+    // Insert keyframes at the end of the stylesheet
+    styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
+  }, []);
+
   return (
     <>
       <Navbar></Navbar>
+
       {/* <Main_slider /> */}
       {/* <main>
         <div className="container">
@@ -69,6 +84,7 @@ function Home() {
           </div>
         </div>
       </main> */}
+
       <main style={{ padding: "30px" }}>
         <div className="container" style={{ position: "relative", zIndex: 1 }}>
           {/* Background Grid */}
@@ -121,41 +137,70 @@ function Home() {
       </main>
 
       <div className="cardsFlow " style={{ width: "100%" }}>
-        <Cards />
         <div style={{ height: "auto" }}>
           {" "}
           <PriceCard></PriceCard>
         </div>{" "}
+        <Cards />
         <div className="mission">
-          <h1 className="animated fadeIn animate-down">
+          <h1
+            className="animated fadeIn animate-down"
+            style={{ color: "#0a5a96" }}
+          >
             YOUR VISION OUR SOLUTION
           </h1>
         </div>
         <Steps></Steps>
       </div>
+
       <div
         style={{
           height: "100vh",
-          width: "100vw",
-          background: "white",
+          width: "100%",
+          backgroundSize: "400% 400%",
+          background:
+            "linear-gradient(-45deg, #0494cc, #0781b6, #043c74, #0a5a96, #036098, #021b56)",
+          animation: "bgAnimation 5s ease infinite",
           display: "flex",
           alignItems: "center", // Vertically centers the content
           justifyContent: "center", // Horizontally centers the content
           // Prevents any overflow issues
           // Set custom cursor
+          marginTop: "50px",
         }}
       >
+        {" "}
         <div
+          // style={{
+          //   // marginTop: "-300px",
+          //   height: "100%",
+          //   width: "100%",
+          //   // paddingLeft: "4.9%",
+          //   background: "transparent",
+          // }}
           style={{
-            marginTop: "-300px",
+            // marginTop: "-300px",
             height: "100%",
             width: "100%",
-            paddingLeft: "8%",
+            padding: " 0 10% 0 3.5%",
+            background: "transparent",
           }}
         >
           {" "}
           <Computer />
         </div>
+      </div>
+      <div style={{ marginTop: "20px" }}>
+        <p>
+          <a
+            href="https://sketchfab.com/3d-models/gaming-desktop-pc-d1d8282c9916438091f11aeb28787b66"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            3D model credits{" "}
+          </a>
+          .
+        </p>
       </div>
       <FeedForm />
       <Testimonials></Testimonials>
@@ -166,3 +211,7 @@ function Home() {
 }
 
 export default Home;
+//MongoDB
+// 3Bdq1UL48QIV3D5V
+// collabvisioninfosolution
+// mongodb+srv://collabvisioninfosolution:3Bdq1UL48QIV3D5V@cluster0.s5lok.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0

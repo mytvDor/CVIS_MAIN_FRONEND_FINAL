@@ -263,7 +263,7 @@ const FeedForm = () => {
   return (
     <div
       className="feed-form-container"
-      style={{ marginTop: "230px", marginBottom: "230px" }}
+      style={{ marginTop: "170px", marginBottom: "230px" }}
     >
       <form onSubmit={handleSubmit} className="feed-form">
         <h1 style={{ textAlign: "center", margin: "40px" }}>

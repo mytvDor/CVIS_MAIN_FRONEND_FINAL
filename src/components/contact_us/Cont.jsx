@@ -50,7 +50,7 @@ const Cont = () => {
         formData.phone = `${countcode}${formData.phone}`;
       }
     }
-
+    // cviswebsitebackend.onrender.com
     try {
       const response = await axios.post(
         "https://cviswebsitebackend.onrender.com/contact",
@@ -59,6 +59,7 @@ const Cont = () => {
       console.log("SUBMITTED", response.data);
     } catch (e) {
       console.log(e);
+      s;
     }
 
     // try {

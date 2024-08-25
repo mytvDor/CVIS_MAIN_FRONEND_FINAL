@@ -78,7 +78,7 @@ const Graphic = () => {
           <h3>About</h3>
           <br></br>
           <li>hi</li>
-          <li>hi</li>
+          <li>hki</li>
           <li>hi</li>
           <li>hi</li>
           <li>hi</li>
