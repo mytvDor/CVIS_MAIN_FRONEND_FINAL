@@ -106,7 +106,15 @@ function Learning() {
                 innovative learning platform. Join us in redefining the future
                 of education and achieving your goals.
               </p>
-              <button onClick={() => navigate("/contact")}>Contact Us</button>
+              <div
+                style={{
+                  fontSize: "20px",
+                  color: "black",
+                  margin: "30px",
+                }}
+              >
+                Comming Soon ...{" "}
+              </div>
             </div>
           </div>
         </div>

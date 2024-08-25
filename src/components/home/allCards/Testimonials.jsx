@@ -89,22 +89,22 @@ const Testimonials = () => {
       _id: "1",
       likeMost: "This service is amazing! I highly recommend it to everyone.",
       rating: 5,
-      firstName: "John",
-      lastName: "Doe",
+      firstName: "Belete",
+      lastName: "",
     },
     {
       _id: "2",
       likeMost: "Very satisfied with the quality and speed of delivery.",
       rating: 4,
-      firstName: "Jane",
-      lastName: "Smith",
+      firstName: "Henry",
+      lastName: "",
     },
     {
       _id: "3",
       likeMost: "Great customer support and excellent product quality!",
       rating: 5,
-      firstName: "Michael",
-      lastName: "Johnson",
+      firstName: "Rakesh",
+      lastName: "M",
     },
   ]);
 
