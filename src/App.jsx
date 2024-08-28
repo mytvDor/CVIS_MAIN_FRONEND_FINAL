@@ -31,6 +31,7 @@ import Cont from "./components/contact_us/Cont";
 import Temp from "./components/home/Temp";
 import Timeline from "./components/home/Motion/Timeline";
 import PricingCards from "./components/home/allCards/PricingCards";
+import ProductPrice from "./components/ProductPrice";
 function App() {
   return (
     <>
@@ -81,6 +82,7 @@ function App() {
 
           {/* <Route path="/pricing" element={<PricingCards />}></Route> */}
           <Route path="/pricing/:category" element={<PricingCards />} />
+          <Route path="/p" element={<ProductPrice />} />
         </Routes>
         <GoToTop />
         <Footer />
