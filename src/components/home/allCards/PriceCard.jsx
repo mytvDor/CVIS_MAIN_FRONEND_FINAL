@@ -1,188 +1,3 @@
-// import React from "react";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import {
-//   faMobileAlt,
-//   faLaptop,
-//   faTabletAlt,
-//   faCode, // Assuming you want to use this for app development
-//   faDesktop, // Assuming you want to use this for web development
-//   faCogs, // Assuming you want to use this for desktop app development
-// } from "@fortawesome/free-solid-svg-icons";
-// import { useNavigate } from "react-router-dom";
-
-// // Keyframe Animation Definition (CSS-in-JS approach)
-// const keyframes = `
-//   @keyframes gradientAnimation {
-//     0% {
-//       background-position: 0% 0%;
-//     }
-//     50% {
-//       background-position: 100% 100%;
-//     }
-//     100% {
-//       background-position: 0% 0%;
-//     }
-//   }
-// `;
-
-// const PriceCard = () => {
-//   const navigate = useNavigate();
-
-//   const [feeds] = React.useState([
-//     {
-//       _id: "1",
-//       title: "MuleSoft Integration",
-//       price: "$0 free tier",
-//       descriptionPoints: [
-//         "Cross-platform apps",
-//         "Custom software solutions",
-//         "Enhanced performance",
-//         "T & C apply",
-//       ],
-//       icon: faCogs,
-//       colorGradient: "linear-gradient(-45deg, #ffec61, #f321d7)", // Gradient color for the card
-//     },
-//     {
-//       _id: "2",
-//       title: "Application Development",
-//       price: "$119",
-//       descriptionPoints: [
-//         "Mobile app development",
-//         "Cross-platform support",
-//         "Custom features and UI",
-//         "T & C apply",
-//       ],
-//       icon: faCode,
-//       colorGradient: "linear-gradient(-45deg, #f403d1, #64b5f6)", // Gradient color for the card
-//     },
-//     {
-//       _id: "3",
-//       title: "Website / web app Development",
-//       price: "$59.99",
-//       descriptionPoints: [
-//         "web development",
-//         "Responsive design",
-//         "SEO optimization",
-//         "T & C apply",
-//       ],
-//       icon: faDesktop,
-//       colorGradient: "linear-gradient(-45deg, #f403d1, #64b5f6)", // Gradient color for the card
-//     },
-//     {
-//       _id: "4",
-//       title: "Desktop App Development",
-//       price: "$99.99",
-//       descriptionPoints: [
-//         "Cross-platform apps",
-//         "Custom software solutions",
-//         "Enhanced performance",
-//         "T & C apply",
-//       ],
-//       icon: faCogs,
-//       colorGradient: "linear-gradient(-45deg, #ffec61, #f321d7)", // Gradient color for the card
-//     },
-//   ]);
-
-//   // Create a style tag to inject keyframes into the DOM
-//   React.useEffect(() => {
-//     const styleTag = document.createElement("style");
-//     styleTag.innerHTML = keyframes;
-//     document.head.appendChild(styleTag);
-//     return () => {
-//       document.head.removeChild(styleTag);
-//     };
-//   }, []);
-
-//   return (
-//     <div style={{ padding: "30px", backgroundColor: "#f9f9f9" }}>
-//       <h1 style={{ textAlign: "center", marginBottom: "20px" }}>Pricing </h1>
-//       <div
-//         style={{
-//           display: "flex",
-//           flexWrap: "wrap",
-//           justifyContent: "center",
-//         }}
-//       >
-//         {feeds.map((item) => (
-//           <div
-//             key={item._id}
-//             style={{
-//               background: item.colorGradient,
-//               backgroundSize: "200% 200%",
-//               boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-//               borderRadius: "15px",
-//               width: "300px",
-//               margin: "10px",
-//               padding: "20px",
-//               textAlign: "center",
-//               animation: "gradientAnimation 5s ease infinite", // Apply the gradient animation
-//               color: "white",
-//             }}
-//           >
-//             <FontAwesomeIcon
-//               icon={item.icon}
-//               size="3x"
-//               style={{ marginBottom: "10px" }}
-//               color="white"
-//             />
-//             <div
-//               style={{
-//                 fontWeight: "700",
-//                 fontSize: "1.25rem",
-//                 marginBottom: "10px",
-//                 color: "white",
-//               }}
-//             >
-//               {item.title}
-//             </div>
-//             Starts From
-//             <div
-//               style={{
-//                 fontSize: "2.925rem",
-//                 fontWeight: "700",
-//                 color: "white",
-//                 marginBottom: "10px",
-//               }}
-//             >
-//               {item.price}
-//             </div>
-//             <div style={{ textAlign: "left", marginBottom: "10px" }}>
-//               {item.descriptionPoints.map((point, index) => (
-//                 <p
-//                   key={index}
-//                   style={{
-//                     marginBottom: "5px",
-//                     marginLeft: "10px",
-//                     fontSize: "17px",
-//                   }}
-//                 >
-//                   • {point}
-//                 </p>
-//               ))}
-//             </div>
-//             <button
-//               style={{
-//                 backgroundColor: "white",
-//                 color: "black",
-//                 border: "none",
-//                 padding: "10px 20px",
-//                 borderRadius: "10px",
-//                 cursor: "pointer",
-//                 fontSize: "16px",
-//                 marginTop: "10px",
-//               }}
-//               onClick={() => navigate("/contact")}
-//             >
-//               Contact us
-//             </button>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default PriceCard;
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode, faDesktop, faCogs } from "@fortawesome/free-solid-svg-icons";
@@ -229,19 +44,6 @@ const PriceCard = () => {
   const [feeds] = React.useState([
     {
       _id: "1",
-      title: "MuleSoft Integration",
-      price: "$0 Free Tier",
-      descriptionPoints: [
-        "Cross-platform apps",
-        "Custom software solutions",
-        "Enhanced performance",
-        "T & C apply",
-      ],
-      icon: faCogs,
-      colorGradient: "linear-gradient(-45deg, #ffec61, #f321d7)", // More vibrant gradient for the free tier
-    },
-    {
-      _id: "2",
       title: "Application Development",
       price: "$119",
       descriptionPoints: [
@@ -254,20 +56,21 @@ const PriceCard = () => {
       colorGradient: "linear-gradient(-45deg, #f403d1, #64b5f6)",
     },
     {
-      _id: "3",
-      title: "Website / web app Development",
-      price: "$59.99",
+      _id: "2",
+      title: "MuleSoft Integration",
+      price: "$0 Free Tier",
       descriptionPoints: [
-        "web development",
-        "Responsive design",
-        "SEO optimization",
+        "Cross-platform apps",
+        "Custom software solutions",
+        "Enhanced performance",
         "T & C apply",
       ],
-      icon: faNetworkWired,
-      colorGradient: "linear-gradient(-45deg, #f403d1, #64b5f6)",
+      icon: faCogs,
+      colorGradient: "linear-gradient(-45deg, #ffec61, #f321d7)", // More vibrant gradient for the free tier
     },
+
     {
-      _id: "4",
+      _id: "3",
       title: "Desktop App Development",
       price: "$99.99",
       descriptionPoints: [
@@ -278,6 +81,19 @@ const PriceCard = () => {
       ],
       icon: faDesktopAlt,
       colorGradient: "linear-gradient(-45deg, #ffec61, #f321d7)",
+    },
+    {
+      _id: "4",
+      title: "Website / web app Development",
+      price: "$59.99",
+      descriptionPoints: [
+        "web development",
+        "Responsive design",
+        "SEO optimization",
+        "T & C apply",
+      ],
+      icon: faNetworkWired,
+      colorGradient: "linear-gradient(-45deg, #f403d1, #64b5f6)",
     },
   ]);
 
@@ -313,13 +129,13 @@ const PriceCard = () => {
               padding: "20px",
               textAlign: "center",
               animation: `gradientAnimation 5s ease infinite ${
-                index === 0 ? ", pulse 2s infinite" : ""
+                index === 1 ? ", pulse 2s infinite" : ""
               }`, // Add pulse animation to the first card
               color: "white",
               position: "relative", // Position for the badge
             }}
           >
-            {index === 0 && (
+            {index === 1 && (
               <div
                 style={{
                   position: "absolute",

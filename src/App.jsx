@@ -32,9 +32,42 @@ import Temp from "./components/home/Temp";
 import Timeline from "./components/home/Motion/Timeline";
 import PricingCards from "./components/home/allCards/PricingCards";
 import ProductPrice from "./components/ProductPrice";
+import { Helmet } from "react-helmet";
 function App() {
   return (
     <>
+      {" "}
+      <Helmet>
+        <title>
+          Collab Vision Info Solution - Software Development Company
+        </title>
+        <meta
+          name="description"
+          content="Collab Vision Info Solution is a leading software development company, providing innovative solutions to businesses worldwide."
+        />
+        <meta
+          name="keywords"
+          content="Collab Vision Info Solution, software development, IT services, custom software, enterprise solutions"
+        />
+        <meta
+          property="og:title"
+          content="Collab Vision Info Solution - Software Development Company"
+        />
+        <meta
+          property="og:description"
+          content="Collab Vision Info Solution delivers cutting-edge software solutions to empower your business."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.collabvisioninfosolution.com"
+        />
+        <meta
+          property="og:image"
+          content="https://www.collabvisioninfosolution.com/og-image.jpg"
+        />
+        <meta property="og:site_name" content="Collab Vision Info Solution" />
+      </Helmet>
       <Router>
         {/* <Navbar /> */}
         <Routes>
