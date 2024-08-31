@@ -193,10 +193,176 @@
 //   );
 // };
 
+// // export default FeedForm;
+// import React, { useState } from "react";
+// import "./FeedForm.css"; // Import your custom CSS file
+// import axios from "axios";
+// const FeedForm = () => {
+//   const [formData, setFormData] = useState({
+//     firstName: "",
+//     lastName: "",
+//     email: "",
+//     rating: null,
+//     likeMost: "",
+//     improve: "",
+//   });
+
+//   const handleChange = (e) => {
+//     const { name, value } = e.target;
+//     setFormData((prevData) => ({
+//       ...prevData,
+//       [name]: value,
+//     }));
+//   };
+
+//   const handleRatingChange = (e) => {
+//     const newValue = parseInt(e.target.value, 10);
+//     setFormData((prevData) => ({
+//       ...prevData,
+//       rating: newValue,
+//     }));
+//   };
+
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
+
+//     if (
+//       !formData.firstName ||
+//       !formData.lastName ||
+//       !formData.email ||
+//       formData.rating === null
+//     ) {
+//       alert("Please fill in all mandatory fields.");
+//       return;
+//     }
+
+//     try {
+//       const response = await axios.post(
+//         "https://cviswebsitebackend.onrender.com/feedback",
+//         formData
+//       );
+
+//       console.log(response.data);
+//     } catch (e) {
+//       console.log(e);
+//     }
+
+//     // Handle form submission logic here (e.g., send data to server)
+//     console.log(formData);
+
+//     setFormData({
+//       firstName: "",
+//       lastName: "",
+//       email: "",
+//       rating: null,
+//       likedMost: "",
+//       improvementSuggestions: "",
+//     });
+//   };
+
+//   return (
+//     <div
+//       className="feed-form-container"
+//       style={{ marginTop: "170px", marginBottom: "230px" }}
+//     >
+//       <form onSubmit={handleSubmit} className="feed-form">
+//         <h1 style={{ textAlign: "center", margin: "40px" }}>
+//           {" "}
+//           What you think about service{" "}
+//         </h1>
+//         <div className="form-group single-line-input">
+//           <input
+//             type="text"
+//             name="firstName"
+//             placeholder="First Name"
+//             value={formData.firstName}
+//             onChange={handleChange}
+//             required
+//             style={{ border: "none", borderBottom: "1px solid black" }}
+//           />
+//           <input
+//             type="text"
+//             name="lastName"
+//             placeholder="Last Name"
+//             value={formData.lastName}
+//             onChange={handleChange}
+//             required
+//             style={{ border: "none", borderBottom: "1px solid black" }}
+//           />
+//         </div>
+
+//         <input
+//           type="email"
+//           name="email"
+//           placeholder="Email"
+//           value={formData.email}
+//           onChange={handleChange}
+//           required
+//           style={{ border: "none", borderBottom: "1px solid black" }}
+//         />
+//         <div className="form-group rt">
+//           <label className="rtn">Rate Our Services</label>
+//           <div className="stars">
+//             <div className="rating" style={{ width: "200px" }}>
+//               {[5, 4, 3, 2, 1].map((star) => (
+//                 <React.Fragment key={star}>
+//                   <input
+//                     type="radio"
+//                     id={`star${star}`}
+//                     name="rating"
+//                     value={star}
+//                     checked={formData.rating === star}
+//                     onChange={handleRatingChange}
+//                   />
+//                   <label htmlFor={`star${star}`}></label>
+//                 </React.Fragment>
+//               ))}
+//             </div>
+//           </div>
+//         </div>
+//         <div className="form-group">
+//           <textarea
+//             id="likeMost"
+//             name="likeMost"
+//             value={formData.likeMost}
+//             onChange={handleChange}
+//             style={{
+//               border: "none",
+//               borderBottom: "1px solid black",
+//               width: "95%",
+//             }}
+//             placeholder="What did you like most ?"
+//           />
+//         </div>
+//         <div className="form-group">
+//           <textarea
+//             id="Improve"
+//             name="Improve"
+//             placeholder="How can we improve ?"
+//             value={formData.Improve}
+//             onChange={handleChange}
+//             style={{
+//               border: "none",
+//               borderBottom: "1px solid black",
+//               width: "95%",
+//             }}
+//           />
+//         </div>
+//         <div className="form-group">
+//           <button type="submit">Send Feedback</button>
+//         </div>
+//       </form>
+//     </div>
+//   );
+// };
+
 // export default FeedForm;
 import React, { useState } from "react";
 import "./FeedForm.css"; // Import your custom CSS file
 import axios from "axios";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"; // Import CSS for toast notifications
+
 const FeedForm = () => {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -206,6 +372,8 @@ const FeedForm = () => {
     likeMost: "",
     improve: "",
   });
+
+  const [isSending, setIsSending] = useState(false); // Loader state
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -226,15 +394,25 @@ const FeedForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    // Basic validation
     if (
       !formData.firstName ||
       !formData.lastName ||
       !formData.email ||
       formData.rating === null
     ) {
-      alert("Please fill in all mandatory fields.");
+      toast.error("Please fill in all mandatory fields.");
       return;
     }
+
+    // Additional validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(formData.email)) {
+      toast.error("Please enter a valid email address.");
+      return;
+    }
+
+    setIsSending(true); // Start sending
 
     try {
       const response = await axios.post(
@@ -243,21 +421,21 @@ const FeedForm = () => {
       );
 
       console.log(response.data);
+      toast.success("Feedback sent successfully!");
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        rating: null,
+        likeMost: "",
+        improve: "",
+      });
     } catch (e) {
       console.log(e);
+      toast.error("Failed to send feedback. Please try again.");
+    } finally {
+      setIsSending(false); // Stop sending
     }
-
-    // Handle form submission logic here (e.g., send data to server)
-    console.log(formData);
-
-    setFormData({
-      firstName: "",
-      lastName: "",
-      email: "",
-      rating: null,
-      likedMost: "",
-      improvementSuggestions: "",
-    });
   };
 
   return (
@@ -267,8 +445,7 @@ const FeedForm = () => {
     >
       <form onSubmit={handleSubmit} className="feed-form">
         <h1 style={{ textAlign: "center", margin: "40px" }}>
-          {" "}
-          What you think about service{" "}
+          What you think about our service
         </h1>
         <div className="form-group single-line-input">
           <input
@@ -279,6 +456,7 @@ const FeedForm = () => {
             onChange={handleChange}
             required
             style={{ border: "none", borderBottom: "1px solid black" }}
+            disabled={isSending}
           />
           <input
             type="text"
@@ -288,6 +466,7 @@ const FeedForm = () => {
             onChange={handleChange}
             required
             style={{ border: "none", borderBottom: "1px solid black" }}
+            disabled={isSending}
           />
         </div>
 
@@ -299,6 +478,7 @@ const FeedForm = () => {
           onChange={handleChange}
           required
           style={{ border: "none", borderBottom: "1px solid black" }}
+          disabled={isSending}
         />
         <div className="form-group rt">
           <label className="rtn">Rate Our Services</label>
@@ -313,6 +493,7 @@ const FeedForm = () => {
                     value={star}
                     checked={formData.rating === star}
                     onChange={handleRatingChange}
+                    disabled={isSending}
                   />
                   <label htmlFor={`star${star}`}></label>
                 </React.Fragment>
@@ -331,27 +512,32 @@ const FeedForm = () => {
               borderBottom: "1px solid black",
               width: "95%",
             }}
-            placeholder="What did you like most ?"
+            placeholder="What did you like most?"
+            disabled={isSending}
           />
         </div>
         <div className="form-group">
           <textarea
-            id="Improve"
-            name="Improve"
-            placeholder="How can we improve ?"
-            value={formData.Improve}
+            id="improve"
+            name="improve"
+            placeholder="How can we improve?"
+            value={formData.improve}
             onChange={handleChange}
             style={{
               border: "none",
               borderBottom: "1px solid black",
               width: "95%",
             }}
+            disabled={isSending}
           />
         </div>
         <div className="form-group">
-          <button type="submit">Send Feedback</button>
+          <button type="submit" disabled={isSending}>
+            {isSending ? "Sending..." : "Send Feedback"}
+          </button>
         </div>
       </form>
+      <ToastContainer />
     </div>
   );
 };
