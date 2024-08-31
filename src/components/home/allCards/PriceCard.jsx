@@ -44,19 +44,6 @@ const PriceCard = () => {
   const [feeds] = React.useState([
     {
       _id: "1",
-      title: "Application Development",
-      price: "$119",
-      descriptionPoints: [
-        "Mobile app development",
-        "Cross-platform support",
-        "Custom features and UI",
-        "T & C apply",
-      ],
-      icon: faCode,
-      colorGradient: "linear-gradient(-45deg, #f403d1, #64b5f6)",
-    },
-    {
-      _id: "2",
       title: "MuleSoft Integration",
       price: "$0 Free Tier",
       descriptionPoints: [
@@ -67,6 +54,19 @@ const PriceCard = () => {
       ],
       icon: faCogs,
       colorGradient: "linear-gradient(-45deg, #ffec61, #f321d7)", // More vibrant gradient for the free tier
+    },
+    {
+      _id: "2",
+      title: "Application Development",
+      price: "$119",
+      descriptionPoints: [
+        "Mobile app development",
+        "Cross-platform support",
+        "Custom features and UI",
+        "T & C apply",
+      ],
+      icon: faCode,
+      colorGradient: "linear-gradient(-45deg, #f403d1, #64b5f6)",
     },
 
     {
@@ -129,13 +129,13 @@ const PriceCard = () => {
               padding: "20px",
               textAlign: "center",
               animation: `gradientAnimation 5s ease infinite ${
-                index === 1 ? ", pulse 2s infinite" : ""
+                index === 0 ? ", pulse 2s infinite" : ""
               }`, // Add pulse animation to the first card
               color: "white",
               position: "relative", // Position for the badge
             }}
           >
-            {index === 1 && (
+            {index === 0 && (
               <div
                 style={{
                   position: "absolute",

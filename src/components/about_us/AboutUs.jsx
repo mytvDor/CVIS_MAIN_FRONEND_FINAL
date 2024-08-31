@@ -289,7 +289,7 @@ function AboutUs() {
             }}
             className="animate-down"
           >
-            About Collab Vision Infosolutions
+            About Collab Vision Infosolution
           </h1>
 
           <h3

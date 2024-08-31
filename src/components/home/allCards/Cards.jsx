@@ -28,22 +28,6 @@ const Cards = () => {
       <div className="card-container">
         {/* First Card - Android App Development */}
         <div
-          className="card animate-left"
-          onClick={() => handleCardClick("App Development")}
-        >
-          <div className="card-image">
-            <img src={Android} alt="Android App Development" />
-          </div>
-          <div className="card-content">
-            <div className="card-title">App Development</div>
-            <p className="card-text" style={{ textAlign: "left" }}>
-              Empowering innovation through cutting-edge mobile and web app
-              development tailored to your needs.
-            </p>
-          </div>
-        </div>
-
-        <div
           className="card animate-right"
           onClick={() => handleCardClick("Integration")}
         >
@@ -56,6 +40,21 @@ const Cards = () => {
             <p className="card-text" style={{ textAlign: "left" }}>
               Seamlessly connecting systems and enhancing workflows with our
               robust integration platform solutions
+            </p>
+          </div>
+        </div>
+        <div
+          className="card animate-left"
+          onClick={() => handleCardClick("App Development")}
+        >
+          <div className="card-image">
+            <img src={Android} alt="Android App Development" />
+          </div>
+          <div className="card-content">
+            <div className="card-title">App Development</div>
+            <p className="card-text" style={{ textAlign: "left" }}>
+              Empowering innovation through cutting-edge mobile and web app
+              development tailored to your needs.
             </p>
           </div>
         </div>
