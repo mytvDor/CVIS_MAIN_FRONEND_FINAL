@@ -49,19 +49,40 @@ import { useEffect } from "react";
 
 function Home() {
   const navigate = useNavigate();
+  // useEffect(() => {
+  //   const styleSheet = document.styleSheets[0];
+  //   const keyframes = `
+  //     @keyframes bgAnimation {
+  //       0% { background-position: 0% 50%; }
+  //       50% { background-position: 100% 100%; }
+  //       100% { background-position: 0% 50%; }
+  //     }`;
+
+  //   // Insert keyframes at the end of the stylesheet
+  //   styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
+  // }, []);
   useEffect(() => {
-    const styleSheet = document.styleSheets[0];
+    // Create a new <style> element
+    const style = document.createElement("style");
+    style.type = "text/css";
     const keyframes = `
       @keyframes bgAnimation {
         0% { background-position: 0% 50%; }
         50% { background-position: 100% 100%; }
         100% { background-position: 0% 50%; }
       }`;
+    
+    // Append the keyframes to the <style> element
+    style.appendChild(document.createTextNode(keyframes));
+    
+    // Append the <style> element to the document head
+    document.head.appendChild(style);
 
-    // Insert keyframes at the end of the stylesheet
-    styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
+    // Clean up the <style> element on unmount
+    return () => {
+      document.head.removeChild(style);
+    };
   }, []);
-
   return (
     <>
       <Navbar></Navbar>

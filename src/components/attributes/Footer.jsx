@@ -38,7 +38,7 @@ const Footer = () => {
                 <LocationOnIcon />
               </div>{" "}
               <t />
-              <div className="addr"> Singapure + 65 </div>{" "}
+              <div className="addr"> Singapure + 65 88470186 </div>{" "}
             </p>
           </div>
           <div className="Address ca-gap">

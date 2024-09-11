@@ -761,7 +761,7 @@ const Cont = () => {
             color="#0075aa"
             ariaLabel="circles-loading"
             wrapperStyle={{}}
-            wrapperClass=""
+            wrapperclassName=""
           />
         </div>
       ) : (
