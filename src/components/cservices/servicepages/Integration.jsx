@@ -14,7 +14,22 @@ const AndroidDevPage = () => {
   return (
     <>
       <Navbar />
-      <div className="container">
+      <div className="container" >
+      <div
+        style={{
+          width: "70%",
+          height: "auto",
+          margin: "0px 0px 0px 99px",
+          textAlign: "center",
+          border:"2px solid red"
+        }}
+      >
+        <img
+          src="https://plus.unsplash.com/premium_photo-1701590725747-ac131d4dcffd?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" // Replace with your banner image path
+          alt="Banner"
+          style={{ width: "100%", height: "auto", display: "block", margin: "0 auto" }}
+        />
+      </div>
         <div className="text wblock animate-down">
           <h1 className="texth1">MuleSoft Integration</h1>
           <br></br>
