@@ -19,8 +19,8 @@ const AndroidDevPage = () => {
         style={{
           width: "70%",
           height: "auto",
-          margin: "0px 0px 0px 99px",
-          textAlign: "center",
+          margin: "0 15%",  // Horizontal margins in percentage
+                    textAlign: "center",
           border:"2px solid red"
         }}
       >
@@ -30,7 +30,7 @@ const AndroidDevPage = () => {
           style={{ width: "100%", height: "auto", display: "block", margin: "0 auto" }}
         />
       </div>
-        <div className="text wblock animate-down">
+        {/* <div className="text wblock animate-down">
           <h1 className="texth1">MuleSoft Integration</h1>
           <br></br>
           <h3>About</h3>
@@ -74,6 +74,31 @@ const AndroidDevPage = () => {
             ensure consistency and compliance across your API ecosystem.
           </li>
           <br />
+          <br />
+          <button className="enqbtn" onClick={handleNavigate}>
+            Enquiry
+          </button>
+          <br />
+        </div> */}
+
+         <div className="text wblock animate-down">
+          <h1 className="texth1">Integrate ADP & Kronos via MuleSoft</h1>
+          <br />
+          <h3>Short Description:</h3>
+          <br />
+          <p>
+          <li>
+      <strong>Seamless Integration:</strong> MuleSoft integrates ADP and Kronos systems used across different firm locations.
+    </li>
+    <li>
+      <strong>Unified Payroll Processes:</strong> Streamlines payroll processes by ensuring consistent data flow between various systems.
+    </li>
+    <li>
+      <strong>Real-Time Data Flow:</strong> Facilitates real-time data exchange, ensuring efficient payroll management across the organization.
+    </li>
+    <li>
+      <strong>Middleware Functionality:</strong> Acts as middleware, automating data synchronization and reducing manual efforts.
+    </li>          </p>
           <br />
           <button className="enqbtn" onClick={handleNavigate}>
             Enquiry
