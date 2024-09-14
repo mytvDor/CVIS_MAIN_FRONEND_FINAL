@@ -296,15 +296,15 @@ const PriceCard = () => {
     },
     {
       _id: "2",
-      title: "Application Development",
-      price: { us: "$119", india: "₹8,999", singapore: "SD 150", other: "$119" },
+      title: "Website / web app Development",
+      price: { us: "$59.99", india: "₹4,499", singapore: "SD 70", other: "$59.99" },
       descriptionPoints: [
-        "Mobile app development",
-        "Cross-platform support",
-        "Custom features and UI",
+        "web development",
+        "Responsive design",
+        "SEO optimization",
         "T & C apply",
       ],
-      icon: faCode,
+      icon: faNetworkWired,
       colorGradient: "linear-gradient(-45deg, #f403d1, #64b5f6)",
     },
     {
@@ -322,15 +322,15 @@ const PriceCard = () => {
     },
     {
       _id: "4",
-      title: "Website / web app Development",
-      price: { us: "$59.99", india: "₹4,499", singapore: "SD 70", other: "$59.99" },
+      title: "Application Development",
+      price: { us: "$119", india: "₹8,999", singapore: "SD 150", other: "$119" },
       descriptionPoints: [
-        "web development",
-        "Responsive design",
-        "SEO optimization",
+        "Mobile app development",
+        "Cross-platform support",
+        "Custom features and UI",
         "T & C apply",
       ],
-      icon: faNetworkWired,
+      icon: faCode,
       colorGradient: "linear-gradient(-45deg, #f403d1, #64b5f6)",
     },
   ]);
@@ -367,7 +367,7 @@ const PriceCard = () => {
           <option value=""> Select Country </option>
           <option value="india">India</option>
           <option value="singapore">Singapore</option>
-          <option value="us">United States</option>
+          {/* <option value="us">United States</option> */}
 
           <option value="other">Other</option>
         </select>

@@ -43,22 +43,27 @@ const Cards = () => {
             </p>
           </div>
         </div>
+      
         <div
-          className="card animate-left"
-          onClick={() => handleCardClick("App Development")}
+          className="card animate-right"
+          onClick={() => handleCardClick("web")}
         >
-          <div className="card-image">
-            <img src={Android} alt="Android App Development" />
+          {" "}
+          <div className="card-image ">
+            <img
+              src={WebDesigning}
+              alt="Web Designing"
+              onClick={() => handleCardClick("WebDevelopment")}
+            />
           </div>
           <div className="card-content">
-            <div className="card-title">App Development</div>
+            <div className="card-title">Web Development</div>
             <p className="card-text" style={{ textAlign: "left" }}>
-              Empowering innovation through cutting-edge mobile and web app
-              development tailored to your needs.
+              Creating dynamic and tailored web solutions with our expert web
+              development services.
             </p>
           </div>
         </div>
-
         {/* Second Card - Software Testing */}
         <div
           className="card animate-left"
@@ -96,22 +101,17 @@ const Cards = () => {
 
         {/* Fourth Card - Web Designing */}
         <div
-          className="card animate-right"
-          onClick={() => handleCardClick("web")}
+          className="card animate-left"
+          onClick={() => handleCardClick("App Development")}
         >
-          {" "}
-          <div className="card-image ">
-            <img
-              src={WebDesigning}
-              alt="Web Designing"
-              onClick={() => handleCardClick("WebDevelopment")}
-            />
+          <div className="card-image">
+            <img src={Android} alt="Android App Development" />
           </div>
           <div className="card-content">
-            <div className="card-title">Web Development</div>
+            <div className="card-title">App Development</div>
             <p className="card-text" style={{ textAlign: "left" }}>
-              Creating dynamic and tailored web solutions with our expert web
-              development services.
+              Empowering innovation through cutting-edge mobile and web app
+              development tailored to your needs.
             </p>
           </div>
         </div>
