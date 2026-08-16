@@ -63,7 +63,7 @@
 
 .card-text {
   font-size: 1.2rem;
-  text-algin: left;
+  text-align: left;
   color: black;
   margin: 0 auto; /* Centers the text container */
   max-width: 80%; /* Limits the width of the text container */

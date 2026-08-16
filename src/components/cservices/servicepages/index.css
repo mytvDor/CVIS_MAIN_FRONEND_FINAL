@@ -6,7 +6,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-item: center;
+  align-items: center;
   /* height: 100%; */
   /* z-index: -100; */
   margin-bottom: 0px;
@@ -76,7 +76,7 @@ button .btn2 {
 .button-container {
   /* border: 2px solid red; */
   display: flex;
-  align-item: center;
+  align-items: center;
   justify-content: center;
   margin: 40px;
 }

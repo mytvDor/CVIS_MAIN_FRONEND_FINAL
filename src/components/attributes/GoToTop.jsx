@@ -39,7 +39,6 @@
 // const Wrapper = styled.section`
 //   display: flex;
 //   justify-content: center;
-//   align-item: center;
 //   position: relative;
 
 //   .topButton {

@@ -7,7 +7,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-item: center;
+  align-items: center;
 }
 
 .card {
@@ -33,7 +33,6 @@
   overflow: hidden;
 }
 
-//home css
 .mission {
   font-size: 5vw; /* Responsive font size */
   padding: 5vh 2vw; /* Responsive padding */
